@@ -4,7 +4,6 @@ import numpy as np
 
 img1 = cv2.imread('testimage.jpg',0)
 
-
 blur = cv2.GaussianBlur(img1,(5,5),0)
 thr = cv2.adaptiveThreshold(blur,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,75,10)
 invrt = cv2.bitwise_not(thr)
